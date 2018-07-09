@@ -118,7 +118,7 @@ class BaseController extends Controller {
      * 404错误
      */
     public function _empty(){
-
+        $this->display('public/404');
     }
 
 }
