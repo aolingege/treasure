@@ -12,13 +12,13 @@ class LoginController extends BaseController {
      */
     public function login()
     {
-        if ($this->checkUser())
+        if ($this->checkLogin())
             $this->redirect('/index/index');
         if (IS_POST){
             //Verification result
             $verifiResult = $this->checkUser();
             if ($verifiResult === true)
-                $this->redirect(U('Index/index'));
+                $this->redirect('/index/index');
             else{
                 //返回提示信息
                 $this->assign('message',$verifiResult);
