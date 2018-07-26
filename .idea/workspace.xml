@@ -2,236 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c0d01982-d66e-4443-ad7d-cd89fc479e91" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/Public/vendors/highcharts/css/highcharts.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Public/vendors/highcharts/css/highcharts.scss" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Public/vendors/highcharts/css/js/highcharts-3d.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Public/vendors/highcharts/css/js/highcharts-3d.src.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Public/vendors/highcharts/css/js/highcharts-more.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Public/vendors/highcharts/css/js/highcharts-more.src.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Public/vendors/highcharts/css/js/highcharts.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Public/vendors/highcharts/css/js/highcharts.src.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Public/vendors/highcharts/css/js/modules/accessibility.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Public/vendors/highcharts/css/js/modules/accessibility.src.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Public/vendors/highcharts/css/js/modules/annotations.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Public/vendors/highcharts/css/js/modules/annotations.src.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Public/vendors/highcharts/css/js/modules/boost-canvas.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Public/vendors/highcharts/css/js/modules/boost-canvas.src.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Public/vendors/highcharts/css/js/modules/boost.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Public/vendors/highcharts/css/js/modules/boost.src.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Public/vendors/highcharts/css/js/modules/broken-axis.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Public/vendors/highcharts/css/js/modules/broken-axis.src.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Public/vendors/highcharts/css/js/modules/bullet.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Public/vendors/highcharts/css/js/modules/bullet.src.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Public/vendors/highcharts/css/js/modules/data.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Public/vendors/highcharts/css/js/modules/data.src.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Public/vendors/highcharts/css/js/modules/drag-panes.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Public/vendors/highcharts/css/js/modules/drag-panes.src.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Public/vendors/highcharts/css/js/modules/drilldown.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Public/vendors/highcharts/css/js/modules/drilldown.src.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Public/vendors/highcharts/css/js/modules/export-data.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Public/vendors/highcharts/css/js/modules/export-data.src.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Public/vendors/highcharts/css/js/modules/exporting.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Public/vendors/highcharts/css/js/modules/exporting.src.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Public/vendors/highcharts/css/js/modules/funnel.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Public/vendors/highcharts/css/js/modules/funnel.src.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Public/vendors/highcharts/css/js/modules/gantt.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Public/vendors/highcharts/css/js/modules/gantt.src.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Public/vendors/highcharts/css/js/modules/grid-axis.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Public/vendors/highcharts/css/js/modules/grid-axis.src.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Public/vendors/highcharts/css/js/modules/heatmap.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Public/vendors/highcharts/css/js/modules/heatmap.src.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Public/vendors/highcharts/css/js/modules/histogram-bellcurve.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Public/vendors/highcharts/css/js/modules/histogram-bellcurve.src.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Public/vendors/highcharts/css/js/modules/item-series.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Public/vendors/highcharts/css/js/modules/item-series.src.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Public/vendors/highcharts/css/js/modules/no-data-to-display.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Public/vendors/highcharts/css/js/modules/no-data-to-display.src.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Public/vendors/highcharts/css/js/modules/offline-exporting.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Public/vendors/highcharts/css/js/modules/offline-exporting.src.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Public/vendors/highcharts/css/js/modules/oldie.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Public/vendors/highcharts/css/js/modules/oldie.src.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Public/vendors/highcharts/css/js/modules/overlapping-datalabels.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Public/vendors/highcharts/css/js/modules/overlapping-datalabels.src.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Public/vendors/highcharts/css/js/modules/parallel-coordinates.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Public/vendors/highcharts/css/js/modules/parallel-coordinates.src.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Public/vendors/highcharts/css/js/modules/pareto.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Public/vendors/highcharts/css/js/modules/pareto.src.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Public/vendors/highcharts/css/js/modules/pattern-fill.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Public/vendors/highcharts/css/js/modules/pattern-fill.src.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Public/vendors/highcharts/css/js/modules/sankey.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Public/vendors/highcharts/css/js/modules/sankey.src.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Public/vendors/highcharts/css/js/modules/series-label.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Public/vendors/highcharts/css/js/modules/series-label.src.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Public/vendors/highcharts/css/js/modules/solid-gauge.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Public/vendors/highcharts/css/js/modules/solid-gauge.src.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Public/vendors/highcharts/css/js/modules/static-scale.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Public/vendors/highcharts/css/js/modules/static-scale.src.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Public/vendors/highcharts/css/js/modules/stock.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Public/vendors/highcharts/css/js/modules/stock.src.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Public/vendors/highcharts/css/js/modules/streamgraph.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Public/vendors/highcharts/css/js/modules/streamgraph.src.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Public/vendors/highcharts/css/js/modules/sunburst.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Public/vendors/highcharts/css/js/modules/sunburst.src.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Public/vendors/highcharts/css/js/modules/tilemap.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Public/vendors/highcharts/css/js/modules/tilemap.src.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Public/vendors/highcharts/css/js/modules/treemap.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Public/vendors/highcharts/css/js/modules/treemap.src.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Public/vendors/highcharts/css/js/modules/variable-pie.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Public/vendors/highcharts/css/js/modules/variable-pie.src.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Public/vendors/highcharts/css/js/modules/variwide.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Public/vendors/highcharts/css/js/modules/variwide.src.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Public/vendors/highcharts/css/js/modules/vector.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Public/vendors/highcharts/css/js/modules/vector.src.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Public/vendors/highcharts/css/js/modules/windbarb.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Public/vendors/highcharts/css/js/modules/windbarb.src.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Public/vendors/highcharts/css/js/modules/wordcloud.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Public/vendors/highcharts/css/js/modules/wordcloud.src.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Public/vendors/highcharts/css/js/modules/xrange.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Public/vendors/highcharts/css/js/modules/xrange.src.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Public/vendors/highcharts/css/js/themes/avocado.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Public/vendors/highcharts/css/js/themes/avocado.src.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Public/vendors/highcharts/css/js/themes/dark-blue.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Public/vendors/highcharts/css/js/themes/dark-blue.src.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Public/vendors/highcharts/css/js/themes/dark-green.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Public/vendors/highcharts/css/js/themes/dark-green.src.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Public/vendors/highcharts/css/js/themes/dark-unica.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Public/vendors/highcharts/css/js/themes/dark-unica.src.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Public/vendors/highcharts/css/js/themes/gray.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Public/vendors/highcharts/css/js/themes/gray.src.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Public/vendors/highcharts/css/js/themes/grid-light.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Public/vendors/highcharts/css/js/themes/grid-light.src.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Public/vendors/highcharts/css/js/themes/grid.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Public/vendors/highcharts/css/js/themes/grid.src.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Public/vendors/highcharts/css/js/themes/sand-signika.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Public/vendors/highcharts/css/js/themes/sand-signika.src.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Public/vendors/highcharts/css/js/themes/skies.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Public/vendors/highcharts/css/js/themes/skies.src.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Public/vendors/highcharts/css/js/themes/sunset.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Public/vendors/highcharts/css/js/themes/sunset.src.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Public/vendors/highcharts/css/themes/dark-unica.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Public/vendors/highcharts/css/themes/grid-light.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Public/vendors/highcharts/css/themes/sand-signika.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Public/vendors/highcharts/highcharts-3d.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Public/vendors/highcharts/highcharts-3d.src.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Public/vendors/highcharts/highcharts-more.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Public/vendors/highcharts/highcharts-more.src.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Public/vendors/highcharts/highcharts.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Public/vendors/highcharts/highcharts.src.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Public/vendors/highcharts/lib/canvg.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Public/vendors/highcharts/lib/canvg.src.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Public/vendors/highcharts/lib/jspdf.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Public/vendors/highcharts/lib/jspdf.src.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Public/vendors/highcharts/lib/rgbcolor.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Public/vendors/highcharts/lib/rgbcolor.src.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Public/vendors/highcharts/lib/svg2pdf.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Public/vendors/highcharts/lib/svg2pdf.src.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Public/vendors/highcharts/modules/accessibility.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Public/vendors/highcharts/modules/accessibility.src.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Public/vendors/highcharts/modules/annotations.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Public/vendors/highcharts/modules/annotations.src.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Public/vendors/highcharts/modules/boost-canvas.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Public/vendors/highcharts/modules/boost-canvas.src.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Public/vendors/highcharts/modules/boost.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Public/vendors/highcharts/modules/boost.src.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Public/vendors/highcharts/modules/broken-axis.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Public/vendors/highcharts/modules/broken-axis.src.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Public/vendors/highcharts/modules/bullet.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Public/vendors/highcharts/modules/bullet.src.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Public/vendors/highcharts/modules/data.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Public/vendors/highcharts/modules/data.src.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Public/vendors/highcharts/modules/drag-panes.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Public/vendors/highcharts/modules/drag-panes.src.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Public/vendors/highcharts/modules/drilldown.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Public/vendors/highcharts/modules/drilldown.src.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Public/vendors/highcharts/modules/export-data.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Public/vendors/highcharts/modules/export-data.src.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Public/vendors/highcharts/modules/exporting.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Public/vendors/highcharts/modules/exporting.src.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Public/vendors/highcharts/modules/funnel.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Public/vendors/highcharts/modules/funnel.src.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Public/vendors/highcharts/modules/gantt.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Public/vendors/highcharts/modules/gantt.src.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Public/vendors/highcharts/modules/grid-axis.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Public/vendors/highcharts/modules/grid-axis.src.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Public/vendors/highcharts/modules/heatmap.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Public/vendors/highcharts/modules/heatmap.src.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Public/vendors/highcharts/modules/histogram-bellcurve.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Public/vendors/highcharts/modules/histogram-bellcurve.src.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Public/vendors/highcharts/modules/item-series.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Public/vendors/highcharts/modules/item-series.src.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Public/vendors/highcharts/modules/no-data-to-display.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Public/vendors/highcharts/modules/no-data-to-display.src.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Public/vendors/highcharts/modules/offline-exporting.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Public/vendors/highcharts/modules/offline-exporting.src.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Public/vendors/highcharts/modules/oldie.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Public/vendors/highcharts/modules/oldie.src.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Public/vendors/highcharts/modules/overlapping-datalabels.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Public/vendors/highcharts/modules/overlapping-datalabels.src.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Public/vendors/highcharts/modules/parallel-coordinates.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Public/vendors/highcharts/modules/parallel-coordinates.src.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Public/vendors/highcharts/modules/pareto.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Public/vendors/highcharts/modules/pareto.src.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Public/vendors/highcharts/modules/pattern-fill.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Public/vendors/highcharts/modules/pattern-fill.src.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Public/vendors/highcharts/modules/sankey.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Public/vendors/highcharts/modules/sankey.src.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Public/vendors/highcharts/modules/series-label.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Public/vendors/highcharts/modules/series-label.src.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Public/vendors/highcharts/modules/solid-gauge.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Public/vendors/highcharts/modules/solid-gauge.src.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Public/vendors/highcharts/modules/static-scale.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Public/vendors/highcharts/modules/static-scale.src.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Public/vendors/highcharts/modules/stock.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Public/vendors/highcharts/modules/stock.src.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Public/vendors/highcharts/modules/streamgraph.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Public/vendors/highcharts/modules/streamgraph.src.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Public/vendors/highcharts/modules/sunburst.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Public/vendors/highcharts/modules/sunburst.src.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Public/vendors/highcharts/modules/tilemap.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Public/vendors/highcharts/modules/tilemap.src.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Public/vendors/highcharts/modules/treemap.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Public/vendors/highcharts/modules/treemap.src.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Public/vendors/highcharts/modules/variable-pie.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Public/vendors/highcharts/modules/variable-pie.src.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Public/vendors/highcharts/modules/variwide.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Public/vendors/highcharts/modules/variwide.src.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Public/vendors/highcharts/modules/vector.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Public/vendors/highcharts/modules/vector.src.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Public/vendors/highcharts/modules/windbarb.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Public/vendors/highcharts/modules/windbarb.src.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Public/vendors/highcharts/modules/wordcloud.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Public/vendors/highcharts/modules/wordcloud.src.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Public/vendors/highcharts/modules/xrange.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Public/vendors/highcharts/modules/xrange.src.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Public/vendors/highcharts/themes/avocado.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Public/vendors/highcharts/themes/avocado.src.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Public/vendors/highcharts/themes/dark-blue.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Public/vendors/highcharts/themes/dark-blue.src.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Public/vendors/highcharts/themes/dark-green.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Public/vendors/highcharts/themes/dark-green.src.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Public/vendors/highcharts/themes/dark-unica.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Public/vendors/highcharts/themes/dark-unica.src.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Public/vendors/highcharts/themes/gray.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Public/vendors/highcharts/themes/gray.src.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Public/vendors/highcharts/themes/grid-light.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Public/vendors/highcharts/themes/grid-light.src.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Public/vendors/highcharts/themes/grid.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Public/vendors/highcharts/themes/grid.src.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Public/vendors/highcharts/themes/sand-signika.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Public/vendors/highcharts/themes/sand-signika.src.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Public/vendors/highcharts/themes/skies.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Public/vendors/highcharts/themes/skies.src.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Public/vendors/highcharts/themes/sunset.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Public/vendors/highcharts/themes/sunset.src.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/Application/Admin/Controller/AuthController.class.php" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/Application/Admin/View/Auth/index.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/Application/Admin/View/Public/footer.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/Application/Admin/View/Public/header.html" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/Application/Admin/Controller/BaseController.class.php" afterPath="$PROJECT_DIR$/Application/Admin/Controller/BaseController.class.php" />
       <change beforePath="$PROJECT_DIR$/Application/Admin/View/Index/index.html" afterPath="$PROJECT_DIR$/Application/Admin/View/Index/index.html" />
       <change beforePath="$PROJECT_DIR$/Application/Runtime/Cache/Admin/b595b808c2ebeeeb0478ffc30bb4e87a.php" afterPath="$PROJECT_DIR$/Application/Runtime/Cache/Admin/b595b808c2ebeeeb0478ffc30bb4e87a.php" />
-      <change beforePath="$PROJECT_DIR$/Public/vendors/easypiechart/examples/excanvas.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/Public/vendors/easypiechart/examples/index.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/Public/vendors/easypiechart/examples/style.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/Public/vendors/easypiechart/jquery.easy-pie-chart.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/Public/vendors/easypiechart/jquery.easy-pie-chart.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/Public/vendors/easypiechart/jquery.easy-pie-chart_custom.css" afterPath="" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -242,43 +20,41 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="IndexController.class.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Application/Admin/Controller/IndexController.class.php">
+      <file leaf-file-name="AuthController.class.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Application/Admin/Controller/AuthController.class.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="144">
-              <caret line="8" column="5" lean-forward="false" selection-start-line="8" selection-start-column="5" selection-end-line="8" selection-end-column="5" />
+              <caret line="8" column="5" lean-forward="true" selection-start-line="8" selection-start-column="5" selection-end-line="8" selection-end-column="5" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="LoginController.class.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Application/Admin/Controller/LoginController.class.php">
+      <file leaf-file-name="header.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Application/Admin/View/Public/header.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1098">
-              <caret line="62" column="9" lean-forward="false" selection-start-line="62" selection-start-column="9" selection-end-line="62" selection-end-column="9" />
-              <folding>
-                <element signature="e#35#62#0#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Application/Admin/View/Index/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="839">
-              <caret line="141" column="39" lean-forward="true" selection-start-line="141" selection-start-column="39" selection-end-line="141" selection-end-column="39" />
+            <state relative-caret-position="480">
+              <caret line="90" column="64" lean-forward="true" selection-start-line="90" selection-start-column="64" selection-end-line="90" selection-end-column="64" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="LoginLogModel.class.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Application/Admin/Model/LoginLogModel.class.php">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Application/Admin/View/Auth/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1386">
-              <caret line="77" column="5" lean-forward="false" selection-start-line="77" selection-start-column="5" selection-end-line="77" selection-end-column="5" />
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BaseController.class.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Application/Admin/Controller/BaseController.class.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="463">
+              <caret line="135" column="39" lean-forward="false" selection-start-line="135" selection-start-column="33" selection-end-line="135" selection-end-column="39" />
               <folding />
             </state>
           </provider>
@@ -325,13 +101,17 @@
         <option value="$PROJECT_DIR$/Application/Admin/View/Login/login.html" />
         <option value="$PROJECT_DIR$/Application/Admin/Model/LoginLogModel.class.php" />
         <option value="$PROJECT_DIR$/Application/Admin/Model/AdminModel.class.php" />
-        <option value="$PROJECT_DIR$/Application/Admin/Controller/BaseController.class.php" />
         <option value="$PROJECT_DIR$/Application/Admin/View/Public/1.html" />
         <option value="$PROJECT_DIR$/Application/Admin/View/Public/404.html" />
         <option value="$PROJECT_DIR$/Application/Admin/View/index.html" />
-        <option value="$PROJECT_DIR$/Application/Admin/Controller/IndexController.class.php" />
         <option value="$PROJECT_DIR$/Application/Admin/Controller/LoginController.class.php" />
+        <option value="$PROJECT_DIR$/Application/Admin/Controller/IndexController.class.php" />
+        <option value="$PROJECT_DIR$/Application/Admin/Controller/AuthController.class.php" />
         <option value="$PROJECT_DIR$/Application/Admin/View/Index/index.html" />
+        <option value="$PROJECT_DIR$/Application/Admin/View/Public/footer.html" />
+        <option value="$PROJECT_DIR$/Application/Admin/View/Auth/index.html" />
+        <option value="$PROJECT_DIR$/Application/Admin/Controller/BaseController.class.php" />
+        <option value="$PROJECT_DIR$/Application/Admin/View/Public/header.html" />
       </list>
     </option>
   </component>
@@ -348,9 +128,9 @@
     </servers>
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="186" />
-    <option name="y" value="37" />
+  <component name="ProjectFrameBounds" extendedState="7">
+    <option name="x" value="-8" />
+    <option name="y" value="114" />
     <option name="width" value="1697" />
     <option name="height" value="872" />
   </component>
@@ -370,6 +150,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -393,13 +175,6 @@
               <item name="treasure" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="Application" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="Admin" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Conf" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="treasure" type="b2602c69:ProjectViewProjectNode" />
-              <item name="treasure" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Application" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Admin" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="Controller" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
@@ -407,13 +182,6 @@
               <item name="treasure" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="Application" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="Admin" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Model" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="treasure" type="b2602c69:ProjectViewProjectNode" />
-              <item name="treasure" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Application" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Admin" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="View" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
@@ -422,44 +190,12 @@
               <item name="Application" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="Admin" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="View" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Index" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="treasure" type="b2602c69:ProjectViewProjectNode" />
-              <item name="treasure" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="Public" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="treasure" type="b2602c69:ProjectViewProjectNode" />
-              <item name="treasure" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Public" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="css" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="treasure" type="b2602c69:ProjectViewProjectNode" />
-              <item name="treasure" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Public" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="js" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="treasure" type="b2602c69:ProjectViewProjectNode" />
-              <item name="treasure" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Public" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="vendors" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="treasure" type="b2602c69:ProjectViewProjectNode" />
-              <item name="treasure" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Public" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="vendors" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="highcharts" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scratches" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -469,16 +205,16 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\PHP\treasure\Application\Admin\Controller" />
+      <recent name="E:\PHP\treasure\Public\vendors\highcharts" />
+      <recent name="E:\PHP\treasure\Public\images" />
+      <recent name="E:\PHP\treasure\Application\Admin\Model" />
+      <recent name="E:\PHP\treasure\Public" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="E:\PHP\treasure\Public\vendors\highcharts" />
       <recent name="E:\PHP\treasure\Application\Admin\View\Login" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="E:\PHP\treasure\Public\vendors\highcharts" />
-      <recent name="E:\PHP\treasure\Public\images" />
-      <recent name="E:\PHP\treasure\Application\Admin\Controller" />
-      <recent name="E:\PHP\treasure\Application\Admin\Model" />
-      <recent name="E:\PHP\treasure\Public" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -517,28 +253,30 @@
       <workItem from="1531125151114" duration="8000" />
       <workItem from="1531182422914" duration="11786000" />
       <workItem from="1531194740665" duration="27000" />
+      <workItem from="1532401546991" duration="843000" />
+      <workItem from="1532597132714" duration="9370000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="47896000" />
+    <option name="totallyTimeSpent" value="58109000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20469083" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18390192" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32826087" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4902174" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.37826088" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -582,39 +320,11 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="29" />
+      <option name="time" value="42" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Application/Admin/Controller/LoginController.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="54">
-          <caret line="3" column="44" lean-forward="false" selection-start-line="3" selection-start-column="30" selection-end-line="3" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Application/Admin/View/Login/login.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="918">
-          <caret line="51" column="32" lean-forward="true" selection-start-line="51" selection-start-column="32" selection-end-line="51" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Application/Admin/Controller/BaseController.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Application/Common/Common/function.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="756">
-          <caret line="47" column="41" lean-forward="false" selection-start-line="47" selection-start-column="41" selection-end-line="47" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ThinkPHP/Library/Think/Auth.class.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2664">
@@ -714,39 +424,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ThinkPHP/Library/Think/Think.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="156">
-          <caret line="215" column="0" lean-forward="false" selection-start-line="215" selection-start-column="0" selection-end-line="215" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Application/Common/Common/function.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Public/vendors/jquery.min.js" />
     <entry file="file://$PROJECT_DIR$/ThinkPHP/Library/Think/Verify.class.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="354">
           <caret line="185" column="0" lean-forward="false" selection-start-line="185" selection-start-column="0" selection-end-line="185" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Application/Common/Conf/config.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="17" column="2" lean-forward="true" selection-start-line="17" selection-start-column="2" selection-end-line="17" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Application/Admin/View/Layout/layout.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="18">
-          <caret line="1" column="13" lean-forward="true" selection-start-line="1" selection-start-column="13" selection-end-line="1" selection-end-column="13" />
         </state>
       </provider>
     </entry>
@@ -765,13 +447,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Public/vendors/jquery-3.3.1.min.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/composer.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -799,13 +474,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ThinkPHP/Library/Think/App.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="182">
-          <caret line="175" column="0" lean-forward="false" selection-start-line="175" selection-start-column="0" selection-end-line="175" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -866,13 +534,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Application/Admin/View/Login/login.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Application/Admin/View/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -887,21 +548,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Application/Admin/Controller/BaseController.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="290">
-          <caret line="41" column="23" lean-forward="false" selection-start-line="41" selection-start-column="23" selection-end-line="41" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Application/Admin/Controller/IndexController.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="8" column="5" lean-forward="false" selection-start-line="8" selection-start-column="5" selection-end-line="8" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Public/vendors/highcharts/css/js/themes/gray.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -909,28 +555,136 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Application/Admin/Model/LoginLogModel.class.php">
+    <entry file="file://$PROJECT_DIR$/composer.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1386">
-          <caret line="77" column="5" lean-forward="false" selection-start-line="77" selection-start-column="5" selection-end-line="77" selection-end-column="5" />
+        <state relative-caret-position="216">
+          <caret line="12" column="6" lean-forward="true" selection-start-line="12" selection-start-column="6" selection-end-line="12" selection-end-column="6" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Application/Admin/Controller/LoginController.class.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1098">
+        <state relative-caret-position="834">
           <caret line="62" column="9" lean-forward="false" selection-start-line="62" selection-start-column="9" selection-end-line="62" selection-end-column="9" />
           <folding>
-            <element signature="e#35#62#0#PHP" expanded="true" />
+            <element signature="e#35#62#0#PHP" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/Admin/Model/LoginLogModel.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="348">
+          <caret line="50" column="0" lean-forward="true" selection-start-line="50" selection-start-column="0" selection-end-line="50" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/Common/Conf/config.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="17" column="2" lean-forward="true" selection-start-line="17" selection-start-column="2" selection-end-line="17" selection-end-column="2" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ThinkPHP/Library/Think/App.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="137">
+          <caret line="91" column="0" lean-forward="false" selection-start-line="91" selection-start-column="0" selection-end-line="91" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/Admin/View/Login/login.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/Admin/View/Layout/layout.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="28" lean-forward="false" selection-start-line="0" selection-start-column="22" selection-end-line="0" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/Admin/View/Public/footer.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="36">
+          <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/Common/Common/function.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="704">
+          <caret line="47" column="39" lean-forward="false" selection-start-line="47" selection-start-column="30" selection-end-line="47" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ThinkPHP/Library/Think/Think.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="156">
+          <caret line="215" column="0" lean-forward="false" selection-start-line="215" selection-start-column="0" selection-end-line="215" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Application/Admin/View/Index/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="839">
-          <caret line="141" column="39" lean-forward="true" selection-start-line="141" selection-start-column="39" selection-end-line="141" selection-end-column="39" />
+        <state relative-caret-position="744">
+          <caret line="110" column="7" lean-forward="true" selection-start-line="110" selection-start-column="7" selection-end-line="110" selection-end-column="7" />
+          <folding>
+            <element signature="n#div#1;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#div#2;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#div#3;n#div#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/Admin/Controller/IndexController.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/Admin/Controller/AuthController.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="8" column="5" lean-forward="true" selection-start-line="8" selection-start-column="5" selection-end-line="8" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/Admin/View/Auth/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/Admin/Controller/BaseController.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="463">
+          <caret line="135" column="39" lean-forward="false" selection-start-line="135" selection-start-column="33" selection-end-line="135" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/Admin/View/Public/header.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="480">
+          <caret line="90" column="64" lean-forward="true" selection-start-line="90" selection-start-column="64" selection-end-line="90" selection-end-column="64" />
           <folding />
         </state>
       </provider>

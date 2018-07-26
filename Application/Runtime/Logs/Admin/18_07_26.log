@@ -1,0 +1,6 @@
+[ 2018-07-26T19:38:20+08:00 ] ::1 /index.php/Index/index.html
+ERR: [] operator not supported for strings
+
+[ 2018-07-26T20:06:34+08:00 ] ::1 /index.php/Auth/index.html
+ERR: 模板不存在:./Application/Admin/View/Auth/index.html
+

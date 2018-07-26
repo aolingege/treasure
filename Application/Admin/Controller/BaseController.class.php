@@ -4,7 +4,7 @@ use Think\Controller;
 class BaseController extends Controller {
 
     public $admin = null;        //管理员信息
-
+    protected $enterTime;
 
     /**
      * 构造函数完成相关检测
@@ -77,10 +77,11 @@ class BaseController extends Controller {
         $config['MODULE_NAME'] = MODULE_NAME;
 
         //读取系统导航
+        //读取能看到的导航条
         $navigation = M('auth_rule')->where('show_status=1')->order('sort DESC,id ASC')->field('id,name,title,parent_id')->select();
         //取权限交集
         $navigation = refactor_array($navigation);
-
+        //如果ID不等于1
         if ($this->admin['id'] != 1) {
             $intersect = array_intersect(array_keys($navigation), $this->admin['rule']);
 
@@ -90,9 +91,55 @@ class BaseController extends Controller {
                 }
             }
         }
-
+        $config['current'] = $this->getCurrentFn($navigation);
         $config['navigation'] = tree_array($navigation);
         $this->assign('config', $config);
+    }
+
+
+    /**
+     * 得到当前的功能集
+     */
+    protected function getCurrentFn($fns){
+        $current = array();
+        //Tree function set
+        //Linear lookup
+        foreach ($fns as $index => $fn){
+            //一级控制器
+            if ($fn['parent_id'] == 0 && $fn['name'] == CONTROLLER_NAME){
+                //Current function
+                $current = $fn;
+                unset($fns[$index]);
+                break;
+            }elseif ($fn['parent_id'] == 0){
+                unset($fns[$index]);
+            }
+        }
+        //Can't find
+        if (empty($current))
+            return false;
+        //寻找下面的
+        $currentH3 = array();
+        foreach ($fns as $fn){
+            if ($fn['parent_id'] == $current['id']){
+                    if (str_replace('Nav','',$fn['name']) == CONTROLLER_NAME)
+                        $fn['active'] = 'active';
+                    $currentH3[] = $fn;
+            }
+        }
+        //go on
+        if (!empty($currentH3)){
+            foreach ($currentH3 as $index => $title){
+                foreach ($fns as $fn){
+                    if ($title['id'] == $fn['parent_id']){
+                        if ($fn['name'] != CONTROLLER_NAME.'/'.ACTION_NAME)
+                            $fn['active'] = 'style="display: none;"';
+                        $currentH3[$index]['children'][] = $fn;
+                    }
+                }
+            }
+        }
+        return array('h2'=>$current,'h3'=>$currentH3);
     }
 
 

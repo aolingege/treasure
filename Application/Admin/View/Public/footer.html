@@ -1,0 +1,39 @@
+</div>
+</div>
+
+
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script type="text/javascript" src="__PUBLIC__/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="__PUBLIC__/js/twitter-bootstrap-hover-dropdown.min.js"></script>
+
+<!--highcharts-->
+<script src="__PUBLIC__/vendors/highcharts/highcharts.js"></script>
+<!--<script src="__PUBLIC__/vendors/highcharts/modules/series-label.js"></script>-->
+<!--<script src="__PUBLIC__/vendors/highcharts/modules/exporting.js"></script>-->
+<!--<script src="__PUBLIC__/vendors/highcharts/modules/export-data.js"></script>-->
+
+<script type="text/javascript">
+    $('.parent-node').on('click',function(e){
+        // Trigger element
+        var $triggerElement = $(e.target);
+        if ($triggerElement.hasClass('glyphicon')){
+            // parent-node
+            $triggerElement = $triggerElement.parent();
+        }
+        //排他
+        $('.parent-node').removeClass('active');
+        $('.glyphicon-chevron-down').removeClass('glyphicon-chevron-down pull-right').addClass('glyphicon-chevron-right');
+        var $subsetNode = $triggerElement.parent('.parent-node').addClass('active').children();
+        //font-icon
+        $subsetNode.children().removeClass('glyphicon-chevron-right').addClass('glyphicon-chevron-down pull-right');
+        // Display list
+        var $displayList = $subsetNode.parent().next().children().slideDown(300);
+        $('.subset').each(function (index,element) {
+            if(!$(element).is($displayList))
+                $(element).slideUp(300);
+        });
+    });
+</script>
+
+</body>
+</html>
