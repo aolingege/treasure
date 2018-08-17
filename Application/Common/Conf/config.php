@@ -13,6 +13,8 @@ return array(
 
     'SHOW_PAGE_TRACE' => true,
     'DEFAULT_MODULE' => 'Admin',
-    'MODULE_ALLOW_LIST' => array('Admin'),
+    'MODULE_ALLOW_LIST' => array('Admin','Home'),
+
+    'IP_URL' => 'http://www.xicidaili.com/nn/',
 
 );

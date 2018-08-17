@@ -1,6 +1,6 @@
 </div>
 </div>
-
+</main>
 
 <!-- Include all compiled plugins (below), or include individual files as needed -->
 <script type="text/javascript" src="__PUBLIC__/js/bootstrap.min.js"></script>
@@ -33,6 +33,35 @@
                 $(element).slideUp(300);
         });
     });
+
+    var lang = {
+        lengthMenu: '<select class="length form-control input-sm" >' +
+        '<option value="10">10</option>' +
+        '<option value="25">25</option>' +
+        '<option value="50">50</option>' +
+        '<option value="75">75</option>' +
+        '<option value="100">100</option>' +
+        '<option value="500">500</option>' +
+        '</select> 记录条数',
+        search: '<span>表格搜索：</span>',
+        oPaginate: {
+            "sFirst": "首页",
+            "sPrevious": "上页",
+            "sNext": "下页",
+            "sLast": "末页"
+        },
+        zeroRecords: "<span>没有内容</span>",
+        info: "<span>总共_PAGES_ 页，显示第_START_ 到第 _END_ ，筛选之后得到 _TOTAL_ 条，初始_MAX_ 条 </span>",
+        infoEmpty: "<span>0条记录</span>",//筛选为空时左下角的显示。
+        infoFiltered: "",
+        sLoadingRecords: "载入中...",
+        sProcessing: "处理中...",
+        oAria: {
+            "sSortAscending": ": 以升序排列此列",
+            "sSortDescending": ": 以降序排列此列"
+        }
+    };
+
 </script>
 
 </body>

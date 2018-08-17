@@ -1,0 +1,12 @@
+[ 2018-08-17T17:05:13+08:00 ] ::1 /index.php/Auth/index.html
+ERR: 1146:Table 'blank.auth' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `auth`
+
+[ 2018-08-17T17:05:48+08:00 ] ::1 /index.php/Auth/index.html
+ERR: 1146:Table 'blank.auth' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `auth`
+
+[ 2018-08-17T17:05:52+08:00 ] ::1 /index.php/Auth/index.html
+ERR: 1146:Table 'blank.auth' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `auth`
+

@@ -102,10 +102,61 @@
                 <!--</ul>-->
             </ul>
         </div>
+        <main class="col-md-10">
+<div class="row">
+       <div class="panel panel-default">
+           <div class="panel-heading">
+               <div class="text-muted bootstrap-admin-box-title">节点列表</div>
+           </div>
+           <div class="bootstrap-admin-panel-content">
+               <table class="table table-striped table-bordered" id="tableList">
+                   <thead>
+                   <tr>
+                       <th>字段</th>
+                       <th>名称</th>
+                       <th>分类</th>
+                       <th>是否显示</th>
+                       <th>排序</th>
+                       <th>操作</th>
+                   </tr>
+                   </thead>
+                   <tbody>
+                       <?php if(is_array($info)): $i = 0; $__LIST__ = $info;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><tr>
+                               <td><?php echo ($vo['name']); ?></td>
+                               <td><?php echo ($vo['title']); ?></td>
+                               <td><?php echo ($vo['explain']); ?></td>
+                               <td><?php echo ($vo['show']); ?></td>
+                               <td><?php echo ($vo['sort']); ?></td>
+                               <td><?php echo ($vo['id']); ?></td>
+                           </tr><?php endforeach; endif; else: echo "" ;endif; ?>
+                   </tbody>
+               </table>
+           </div>
+       </div>
+</div>
+<script type="text/javascript">
+    $(function () {
+        // $('#tableList').DataTable({
+        //     ordering: true,
+        //     searching: true,
+        //     iDisplayLength : 60,
+        //     language: lang,
+        //     paging: true,
+        //     pagingType: "full_numbers"
+        //     // order: [[ 11, "desc" ]],
+        //     // columnDefs: [
+        //     //     {"targets": [10], "orderable": false},
+        //     //     {"targets": [8,9,11],"visible":false}
+        //     // ]
+        // });
+    });
+</script>
+<script src="/Public/js/dataTables.bootstrap.min.js"></script>
+<script src="/Public/js/jquery.dataTables.min.js"></script>
 
 </div>
 </div>
-
+</main>
 
 <!-- Include all compiled plugins (below), or include individual files as needed -->
 <script type="text/javascript" src="/Public/js/bootstrap.min.js"></script>
@@ -138,6 +189,35 @@
                 $(element).slideUp(300);
         });
     });
+
+    var lang = {
+        lengthMenu: '<select class="length form-control input-sm" >' +
+        '<option value="10">10</option>' +
+        '<option value="25">25</option>' +
+        '<option value="50">50</option>' +
+        '<option value="75">75</option>' +
+        '<option value="100">100</option>' +
+        '<option value="500">500</option>' +
+        '</select> 记录条数',
+        search: '<span>表格搜索：</span>',
+        oPaginate: {
+            "sFirst": "首页",
+            "sPrevious": "上页",
+            "sNext": "下页",
+            "sLast": "末页"
+        },
+        zeroRecords: "<span>没有内容</span>",
+        info: "<span>总共_PAGES_ 页，显示第_START_ 到第 _END_ ，筛选之后得到 _TOTAL_ 条，初始_MAX_ 条 </span>",
+        infoEmpty: "<span>0条记录</span>",//筛选为空时左下角的显示。
+        infoFiltered: "",
+        sLoadingRecords: "载入中...",
+        sProcessing: "处理中...",
+        oAria: {
+            "sSortAscending": ": 以升序排列此列",
+            "sSortDescending": ": 以降序排列此列"
+        }
+    };
+
 </script>
 
 </body>
