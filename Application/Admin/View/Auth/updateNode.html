@@ -1,0 +1,114 @@
+<div class="row">
+    <div class="panel panel-default bootstrap-admin-no-table-panel">
+        <div class="panel-heading">
+            <div class="text-muted bootstrap-admin-box-title">{$title}节点</div>
+        </div>
+        <div class="bootstrap-admin-no-table-panel-content bootstrap-admin-panel-content collapse in">
+            <form class="form-horizontal" method="post" action="{:U('updateNode')}">
+                <fieldset>
+                    <legend>{$tip|default=''}</legend>
+                    <!--form id-->
+                    <input  name="id" type="text"  value="{$edit['id']}" style="display: none;">
+                    <div class="form-group">
+                        <label class="col-lg-2 control-label" for="name">字段:</label>
+                        <div class="col-lg-10">
+                            <input class="form-control" id="name" name="name" type="text" placeholder="例:Auth/add" value="{$edit['name']}">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-lg-2 control-label" for="title">名称:</label>
+                        <div class="col-lg-10">
+                            <input class="form-control" id="title" name="title" type="text" placeholder="例:添加节点" value="{$edit['title']}">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-lg-2 control-label" for="level">分类:</label>
+                        <div class="col-lg-10">
+                            <select class="form-control" id="level" name="level">
+                                <option value="1">控制器</option>
+                                <option value="2">方法</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-lg-2 control-label" for="show_status">显示:</label>
+                        <div class="col-lg-10">
+                            <select class="form-control" id="show_status" name="show_status">
+                                <option value="0">不显示</option>
+                                <option value="1">显示</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group" id="navGroup">
+                        <label class="col-lg-2 control-label" for="nav">导航:</label>
+                        <div class="col-lg-10">
+                            <select class="form-control" id="nav" name="nav">
+                                <volist name="parentNav" id="data">
+                                    <option value="{$data['id']}">{$data['title']}</option>
+                                </volist>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group" id="controllerGroup">
+                        <label class="col-lg-2 control-label" for="controller">控制器:</label>
+                        <div class="col-lg-10">
+                            <select class="form-control" id="controller" name="controller">
+                                <volist name="parentController" id="data">
+                                    <option value="{$data['id']}">{$data['title']}</option>
+                                </volist>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-lg-2 control-label" for="sort">排序值:</label>
+                        <div class="col-lg-10">
+                            <input class="form-control" id="sort" name="sort" type="text" placeholder="例:255" value="{$edit['sort']}">
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-primary">提交</button>
+                    <button type="reset" class="btn btn-default" id="reset">还原</button>
+                    <a class="btn btn-default" href="{:U('index')}">返回</a>
+                </fieldset>
+            </form>
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+    $(function () {
+        reset();
+
+        $('#reset').on('click',function () {
+            setTimeout(reset,50);
+        });
+
+        $('#level').change(function () {
+            levelChange()
+        });
+
+    });
+
+    function levelChange() {
+        var value = $('#level').val();
+        if (value === "1"){
+            $('#controllerGroup').hide();
+            $('#navGroup').show();
+        }else{
+            $('#controllerGroup').show();
+            $('#navGroup').hide();
+        }
+    }
+    
+    
+    function reset() {
+        var level = "{$edit['level']}";
+        var show = "{$edit['show_status']}";
+        var parent = "{$edit['parent_id']}";
+        $('#level').val(level);
+        $('#show_status').val(show);
+
+        $('#nav').val(parent);
+        $('#controller').val(parent);
+
+        levelChange();
+    }
+</script>

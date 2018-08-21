@@ -132,8 +132,12 @@ class BaseController extends Controller {
             foreach ($currentH3 as $index => $title){
                 foreach ($fns as $fn){
                     if ($title['id'] == $fn['parent_id']){
-                        if ($fn['name'] != CONTROLLER_NAME.'/'.ACTION_NAME)
-                            $fn['active'] = 'style="display: none;"';
+                        if ($fn['name'] != CONTROLLER_NAME.'/'.ACTION_NAME){
+                            $tempFns = explode('/',$fn['name']);
+                            if (CONTROLLER_NAME != $tempFns[0]){
+                                $fn['active'] = 'style="display: none;"';
+                            }
+                        }
                         $currentH3[$index]['children'][] = $fn;
                     }
                 }
@@ -166,6 +170,24 @@ class BaseController extends Controller {
      */
     public function _empty(){
         $this->display('public/404');
+    }
+
+    /**
+     * 通用添加编辑
+     * @param $that
+     * @param $table
+     * @param string $id
+     */
+    public function updateCommon($that,$table,$id='')
+    {
+        if ($id){
+            $title = '编辑';
+            $rule = M($table)->where("id='{$id}'")->find();
+            $that->assign('edit',$rule);
+        }else{
+            $title = '添加';
+        }
+        $that->assign('title',$title);
     }
 
 }

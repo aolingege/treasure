@@ -1,6 +1,7 @@
 <?php
 namespace Admin\Model;
 
+use Think\Exception;
 use Think\Model;
 
 class AuthModel extends Model
@@ -9,6 +10,11 @@ class AuthModel extends Model
     protected $tableName = 'rule';
     protected $tablePrefix = 'auth_';
 
+
+    /**
+     * 得到所有的权限规则
+     * @return array
+     */
     public function getAllAuth()
     {
         $allRule = M('auth_rule')->where('level != 0')->select();
@@ -48,6 +54,27 @@ class AuthModel extends Model
             $arr[$k]['show'] = $show[$row['show_status']];
         }
         return $arr;
+    }
+
+
+    /**
+     * 保存于更新方法
+     * @param $table
+     * @param $data
+     * @return array
+     */
+    public static function commonUpdate($table,$data)
+    {
+        try{
+            if ($data['id']){
+                $result = M($table)->data($data)->save();
+            }else{
+                $result = M($table)->data($data)->add();
+            }
+        }catch (Exception $exception){
+            $result = array('exception'=>$exception->getMessage(),'status'=>0);
+        }
+        return array('exception'=>'','status'=>$result);
     }
     
 }

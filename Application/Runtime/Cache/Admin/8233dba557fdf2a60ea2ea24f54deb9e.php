@@ -139,117 +139,115 @@
             </ul>
         </div>
         <main class="col-md-10">
- <!-- content -->
-<div class="col-md-10">
-            <div class="row">
-                <div class="navbar navbar-default bootstrap-admin-navbar-thin">
-                    <ol class="breadcrumb bootstrap-admin-breadcrumb">
-                        <li>
-                            <a href="<?php echo U('index/index');?>">首页</a>
-                        </li>
-                    </ol>
-                </div>
-            </div>
-
-            <div class="row bootstrap-admin-no-edges-padding">
-                <div class="col-md-12">
-                    <div class="panel panel-default">
-                        <div class="panel-heading">
-                            <div class="text-muted bootstrap-admin-box-title">采集信息</div>
-                            <div class="pull-right"><span class="badge">今日累计采集数 14564</span></div>
-                        </div>
-                        <div class="bootstrap-admin-panel-content">
-                            <table class="table table-striped">
-                                <thead>
-                                <tr>
-                                    <th>#</th>
-                                    <th>采集类型</th>
-                                    <th>采集数</th>
-                                    <th>任务开始时间</th>
-                                    <th>任务结束时间</th>
-                                </tr>
-                                </thead>
-                                <tbody>
-                                <tr>
-                                    <td>1</td>
-                                    <td>美食</td>
-                                    <td>1221</td>
-                                    <td>2018-07-10 07:06:01</td>
-                                    <td>2018-07-10 07:15:01</td>
-                                </tr>
-                                </tbody>
-                            </table>
+<div class="row">
+    <div class="panel panel-default bootstrap-admin-no-table-panel">
+        <div class="panel-heading">
+            <div class="text-muted bootstrap-admin-box-title"><?php echo ($title); ?>节点</div>
+        </div>
+        <div class="bootstrap-admin-no-table-panel-content bootstrap-admin-panel-content collapse in">
+            <form class="form-horizontal" method="post" action="<?php echo U('updateNode');?>">
+                <fieldset>
+                    <legend><?php echo ((isset($tip) && ($tip !== ""))?($tip):''); ?></legend>
+                    <!--form id-->
+                    <input  name="id" type="text"  value="<?php echo ($edit['id']); ?>" style="display: none;">
+                    <div class="form-group">
+                        <label class="col-lg-2 control-label" for="name">字段:</label>
+                        <div class="col-lg-10">
+                            <input class="form-control" id="name" name="name" type="text" placeholder="例:Auth/add" value="<?php echo ($edit['name']); ?>">
                         </div>
                     </div>
-                </div>
-            </div>
-
-
-            <div class="row">
-                <div class="panel panel-default bootstrap-admin-no-table-panel">
-                    <div class="panel-heading">
-                        <div class="text-muted bootstrap-admin-box-title">后台负载</div>
-                    </div>
-                    <div class="bootstrap-admin-panel-content bootstrap-admin-no-table-panel-content collapse in">
-                        <div class="charts" id="charts-load"></div>
-                        <div class="chart-bottom-heading">
-                            <span class="label label-info">服务器时区：东八区</span>
+                    <div class="form-group">
+                        <label class="col-lg-2 control-label" for="title">名称:</label>
+                        <div class="col-lg-10">
+                            <input class="form-control" id="title" name="title" type="text" placeholder="例:添加节点" value="<?php echo ($edit['title']); ?>">
                         </div>
                     </div>
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="panel panel-default bootstrap-admin-no-table-panel">
-                    <div class="panel-heading">
-                        <div class="text-muted bootstrap-admin-box-title">后台登录统计</div>
-                        <div class="pull-right"><span class="badge">今日登录总数:100次</span></div>
-                    </div>
-                    <div class="bootstrap-admin-panel-content bootstrap-admin-no-table-panel-content collapse in">
-                        <div class="charts" id="charts-error"></div>
-                        <div class="chart-bottom-heading">
-                            <span class="label label-info">登录成功率：3/100次</span>
+                    <div class="form-group">
+                        <label class="col-lg-2 control-label" for="level">分类:</label>
+                        <div class="col-lg-10">
+                            <select class="form-control" id="level" name="level">
+                                <option value="1">控制器</option>
+                                <option value="2">方法</option>
+                            </select>
                         </div>
                     </div>
-                </div>
-            </div>
-
+                    <div class="form-group">
+                        <label class="col-lg-2 control-label" for="show_status">显示:</label>
+                        <div class="col-lg-10">
+                            <select class="form-control" id="show_status" name="show_status">
+                                <option value="0">不显示</option>
+                                <option value="1">显示</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group" id="navGroup">
+                        <label class="col-lg-2 control-label" for="nav">导航:</label>
+                        <div class="col-lg-10">
+                            <select class="form-control" id="nav" name="nav">
+                                <?php if(is_array($parentNav)): $i = 0; $__LIST__ = $parentNav;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$data): $mod = ($i % 2 );++$i;?><option value="<?php echo ($data['id']); ?>"><?php echo ($data['title']); ?></option><?php endforeach; endif; else: echo "" ;endif; ?>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group" id="controllerGroup">
+                        <label class="col-lg-2 control-label" for="controller">控制器:</label>
+                        <div class="col-lg-10">
+                            <select class="form-control" id="controller" name="controller">
+                                <?php if(is_array($parentController)): $i = 0; $__LIST__ = $parentController;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$data): $mod = ($i % 2 );++$i;?><option value="<?php echo ($data['id']); ?>"><?php echo ($data['title']); ?></option><?php endforeach; endif; else: echo "" ;endif; ?>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-lg-2 control-label" for="sort">排序值:</label>
+                        <div class="col-lg-10">
+                            <input class="form-control" id="sort" name="sort" type="text" placeholder="例:255" value="<?php echo ($edit['sort']); ?>">
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-primary">提交</button>
+                    <button type="reset" class="btn btn-default" id="reset">还原</button>
+                    <a class="btn btn-default" href="<?php echo U('index');?>">返回</a>
+                </fieldset>
+            </form>
+        </div>
+    </div>
 </div>
-<script>
+<script type="text/javascript">
     $(function () {
-        var chart = Highcharts.chart('charts-error', {
-            title: {
-                text: '登录错误率'
-            },
-            tooltip: {
-                headerFormat: '{series.name}<br>',
-                pointFormat: '{point.name}: <b>{point.percentage:.1f}%</b>'
-            },
-            plotOptions: {
-                pie: {
-                    allowPointSelect: true,  // 可以被选择
-                    cursor: 'pointer',       // 鼠标样式
-                    dataLabels: {
-                        enabled: true,
-                        format: '<b>{point.name}</b>: {point.percentage:.1f} %',
-                        style: {
-                            color: (Highcharts.theme && Highcharts.theme.contrastTextColor) || 'black'
-                        }
-                    }
-                }
-            },
-            series: [{
-                type: 'pie',
-                name: '错误类型',
-                data: [
-                    ['验证码错误',   45.0],
-                    ['正常登录',       26.8],
-                    ['密码错误',    8.5],
-                    ['其他',   0.7]
-                ]
-            }]
+        reset();
+
+        $('#reset').on('click',function () {
+            setTimeout(reset,50);
         });
+
+        $('#level').change(function () {
+            levelChange()
+        });
+
     });
+
+    function levelChange() {
+        var value = $('#level').val();
+        if (value === "1"){
+            $('#controllerGroup').hide();
+            $('#navGroup').show();
+        }else{
+            $('#controllerGroup').show();
+            $('#navGroup').hide();
+        }
+    }
+    
+    
+    function reset() {
+        var level = "<?php echo ($edit['level']); ?>";
+        var show = "<?php echo ($edit['show_status']); ?>";
+        var parent = "<?php echo ($edit['parent_id']); ?>";
+        $('#level').val(level);
+        $('#show_status').val(show);
+
+        $('#nav').val(parent);
+        $('#controller').val(parent);
+
+        levelChange();
+    }
 </script>
 </div>
 </div>

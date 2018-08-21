@@ -34,10 +34,46 @@
             /*line-height: 110px;*/
             /*style="min-width:400px;height:400px"*/
         }
+        .dataTables_filter label{
+            float: right;
+        }
+        #tableList_paginate{
+            float: right;
+        }
     </style>
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script type="text/javascript" src="/Public/vendors/jquery-1.9.1.js"></script>
+    <script type="text/javascript">
+        // datatables language
+        var lang = {
+            lengthMenu: '<select class="dataTables_length form-control" >' +
+            '<option value="10">10</option>' +
+            '<option value="25">25</option>' +
+            '<option value="50">50</option>' +
+            '<option value="75">75</option>' +
+            '<option value="100">100</option>' +
+            '<option value="500">500</option>' +
+            '</select>',
+            search: '',
+            oPaginate: {
+                "sFirst": "首页",
+                "sPrevious": "上页",
+                "sNext": "下页",
+                "sLast": "末页"
+            },
+            zeroRecords: "<div>没有内容</div>",
+            info: "<div>共_PAGES_ 页，当前_START_ - _END_ ，筛选后 _TOTAL_ 条，初始_MAX_ 条 </div>",
+            infoEmpty: "<div>0条记录</div>",//筛选为空时左下角的显示。
+            infoFiltered: "",
+            sLoadingRecords: "载入中...",
+            sProcessing: "处理中...",
+            oAria: {
+                "sSortAscending": ": 以升序排列此列",
+                "sSortDescending": ": 以降序排列此列"
+            }
+        };
+    </script>
 </head>
 <body class="bootstrap-admin-with-small-navbar">
 <!--Top navigation bar-->
@@ -109,7 +145,7 @@
                <div class="text-muted bootstrap-admin-box-title">节点列表</div>
            </div>
            <div class="bootstrap-admin-panel-content">
-               <table class="table table-striped table-bordered" id="tableList">
+               <table class="table table-striped table-hover" id="tableList">
                    <thead>
                    <tr>
                        <th>字段</th>
@@ -117,7 +153,7 @@
                        <th>分类</th>
                        <th>是否显示</th>
                        <th>排序</th>
-                       <th>操作</th>
+                       <th width="17%">操作</th>
                    </tr>
                    </thead>
                    <tbody>
@@ -127,32 +163,33 @@
                                <td><?php echo ($vo['explain']); ?></td>
                                <td><?php echo ($vo['show']); ?></td>
                                <td><?php echo ($vo['sort']); ?></td>
-                               <td><?php echo ($vo['id']); ?></td>
+                               <td>
+                                   <div>
+                                       <a href="<?php echo U('updateNode','id='.$vo['id']);?>">编辑</a>
+                                       <a href="<?php echo U('');?>">删除</a>
+                                   </div>
+                               </td>
                            </tr><?php endforeach; endif; else: echo "" ;endif; ?>
                    </tbody>
                </table>
            </div>
        </div>
 </div>
+
+
 <script type="text/javascript">
     $(function () {
-        // $('#tableList').DataTable({
-        //     ordering: true,
-        //     searching: true,
-        //     iDisplayLength : 60,
-        //     language: lang,
-        //     paging: true,
-        //     pagingType: "full_numbers"
-        //     // order: [[ 11, "desc" ]],
-        //     // columnDefs: [
-        //     //     {"targets": [10], "orderable": false},
-        //     //     {"targets": [8,9,11],"visible":false}
-        //     // ]
-        // });
+        $('#tableList').DataTable({
+            ordering: true,
+            searching: true,
+            iDisplayLength : 10,
+            language: lang,
+            paging: true,
+            pagingType: "full_numbers"
+        });
     });
 </script>
-<script src="/Public/js/dataTables.bootstrap.min.js"></script>
-<script src="/Public/js/jquery.dataTables.min.js"></script>
+
 
 </div>
 </div>
@@ -163,10 +200,14 @@
 <script type="text/javascript" src="/Public/js/twitter-bootstrap-hover-dropdown.min.js"></script>
 
 <!--highcharts-->
-<script src="/Public/vendors/highcharts/highcharts.js"></script>
+<script type="text/javascript" src="/Public/vendors/highcharts/highcharts.js"></script>
 <!--<script src="/Public/vendors/highcharts/modules/series-label.js"></script>-->
 <!--<script src="/Public/vendors/highcharts/modules/exporting.js"></script>-->
 <!--<script src="/Public/vendors/highcharts/modules/export-data.js"></script>-->
+
+<!--dataTables js-->
+<script type="text/javascript" src="/Public/js/jquery.dataTables.min.js"></script>
+<script type="text/javascript" src="/Public/js/dataTables.bootstrap.min.js"></script>
 
 <script type="text/javascript">
     $('.parent-node').on('click',function(e){
@@ -190,33 +231,6 @@
         });
     });
 
-    var lang = {
-        lengthMenu: '<select class="length form-control input-sm" >' +
-        '<option value="10">10</option>' +
-        '<option value="25">25</option>' +
-        '<option value="50">50</option>' +
-        '<option value="75">75</option>' +
-        '<option value="100">100</option>' +
-        '<option value="500">500</option>' +
-        '</select> 记录条数',
-        search: '<span>表格搜索：</span>',
-        oPaginate: {
-            "sFirst": "首页",
-            "sPrevious": "上页",
-            "sNext": "下页",
-            "sLast": "末页"
-        },
-        zeroRecords: "<span>没有内容</span>",
-        info: "<span>总共_PAGES_ 页，显示第_START_ 到第 _END_ ，筛选之后得到 _TOTAL_ 条，初始_MAX_ 条 </span>",
-        infoEmpty: "<span>0条记录</span>",//筛选为空时左下角的显示。
-        infoFiltered: "",
-        sLoadingRecords: "载入中...",
-        sProcessing: "处理中...",
-        oAria: {
-            "sSortAscending": ": 以升序排列此列",
-            "sSortDescending": ": 以降序排列此列"
-        }
-    };
 
 </script>
 

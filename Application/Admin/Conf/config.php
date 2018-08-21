@@ -1,6 +1,11 @@
 <?php
 return array(
 	//'配置项'=>'配置值'
+    //路由配置
+    'URL_ROUTER_ON'   => true,
+    'URL_ROUTE_RULES'=>array(
+        'Auth/add'=>'Auth/updateNode'
+    ),
 
     //无需进行登录验证的控制器 格式为 控制器=>方法1,方法2...
     'UNLIMITED_CONTROLLER' => array('Login','Empty', 'Client', 'Api'),
