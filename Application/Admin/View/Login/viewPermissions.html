@@ -1,0 +1,33 @@
+<div class="col-md-12">
+    <div class="row">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <div class="text-muted bootstrap-admin-box-title">权限列表</div>
+            </div>
+            <div class="bootstrap-admin-panel-content">
+                <table class="table">
+                    <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>字段</th>
+                        <th>名称</th>
+                        <th>类型</th>
+                        <th>是否显示</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                        <volist name="info" id="item">
+                            <tr>
+                                <td>{$item['id']}</td>
+                                <td>{$item['name']}</td>
+                                <td>{$item['title']}</td>
+                                <td>{$item['explain']}</td>
+                                <td>{$item['show']}</td>
+                            </tr>
+                        </volist>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

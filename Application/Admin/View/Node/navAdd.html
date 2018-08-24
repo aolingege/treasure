@@ -1,0 +1,63 @@
+<div class="row">
+    <div class="panel panel-default bootstrap-admin-no-table-panel">
+        <div class="panel-heading">
+            <div class="text-muted bootstrap-admin-box-title">{$title}导航</div>
+        </div>
+        <div class="bootstrap-admin-no-table-panel-content bootstrap-admin-panel-content collapse in">
+            <form class="form-horizontal" method="post" action="{:U('navAdd')}">
+                <fieldset>
+                    <legend>{$tip|default=''}</legend>
+                    <!--form id-->
+                    <input  name="id" type="text"  value="{$edit['id']}" style="display: none;">
+                    <div class="form-group">
+                        <label class="col-lg-2 control-label" for="name">导航字段:</label>
+                        <div class="col-lg-10">
+                            <input class="form-control" id="name" name="name" type="text" placeholder="例:IndexNav(初始控制器+Nav)" value="{$edit['name']}">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-lg-2 control-label" for="title">导航名称:</label>
+                        <div class="col-lg-10">
+                            <input class="form-control" id="title" name="title" type="text" placeholder="例:首页" value="{$edit['title']}">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-lg-2 control-label" for="show_status">是否显示:</label>
+                        <div class="col-lg-10">
+                            <select class="form-control" id="show_status" name="show_status">
+                                <option value="0">否</option>
+                                <option value="1">是</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-lg-2 control-label" for="sort">排序值:</label>
+                        <div class="col-lg-10">
+                            <input class="form-control" id="sort" name="sort" type="text" placeholder="数字越大越靠前" value="{$edit['sort']}">
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-primary">提交</button>
+                    <button type="reset" class="btn btn-default" id="reset">还原</button>
+                    <a class="btn btn-default" href="{:U('navList')}">返回</a>
+                </fieldset>
+            </form>
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+    $(function () {
+        reset();
+
+        $('#reset').on('click',function () {
+            setTimeout(reset,50);
+        });
+
+    });
+
+
+    
+    function reset() {
+        var show = "{$edit['show_status']}";
+        $('#show_status').val(show);
+    }
+</script>

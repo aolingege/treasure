@@ -78,4 +78,6 @@ class LoginLogModel extends Model
     }
 
 
+
+
 }

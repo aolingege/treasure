@@ -2,6 +2,8 @@
 namespace Admin\Controller;
 
 
+use Admin\Model\AuthModel;
+
 class AuthGroupController extends BaseController {
 
     /**
@@ -19,6 +21,28 @@ class AuthGroupController extends BaseController {
         }
 
         $this->assign('info',$group);
+        $this->display();
+    }
+
+    /**
+     * 更新权限组
+     * @param string $id
+     */
+    public function update($id = '')
+    {
+        $authModel = new AuthModel();
+        if (IS_POST){
+            $result = $authModel->saveAuthGroup();
+            if ($result){
+                $this->success('更新成功',U('index'),1);
+            }else{
+                $this->success('更新失败');
+            }
+            exit();
+        }
+        $this->updateCommon($this,'auth_group',$id);
+        $allAuth = $authModel->getAuthGroup();
+        $this->assign('authNode',$allAuth);
         $this->display();
     }
 

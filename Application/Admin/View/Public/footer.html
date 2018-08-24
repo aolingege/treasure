@@ -16,6 +16,11 @@
 <script type="text/javascript" src="__PUBLIC__/js/jquery.dataTables.min.js"></script>
 <script type="text/javascript" src="__PUBLIC__/js/dataTables.bootstrap.min.js"></script>
 
+<!--dialog-->
+<script type="text/javascript" src="__PUBLIC__/js/dialog-plus-min.js"></script>
+<script type="text/javascript" src="__PUBLIC__/js/common.js"></script>
+
+
 <script type="text/javascript">
     $('.parent-node').on('click',function(e){
         // Trigger element
@@ -37,8 +42,28 @@
                 $(element).slideUp(300);
         });
     });
+    
+    
+    function resetPsw() {
+        confirm('确认重置密码?','提示',function () {
+            $.ajax({
+               type:"POST",
+               url:"{:U('login/resetPsw')}",
+               data:{is:true},
+               success:function (res) {
+                    if(res.status === 1){
+                        tips('重置为123456',4);
+                    }
+               },
+               error:function () {
+                   tips('重置失败');
+               }
+            });
+        });
+    }
 
 
+    
 </script>
 
 </body>

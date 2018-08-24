@@ -1,0 +1,59 @@
+<div class="row">
+    <div class="panel panel-default bootstrap-admin-no-table-panel">
+        <div class="panel-heading">
+            <div class="text-muted bootstrap-admin-box-title">{$title}管理员</div>
+        </div>
+        <div class="bootstrap-admin-no-table-panel-content bootstrap-admin-panel-content collapse in">
+            <form class="form-horizontal" method="post" action="{:U('add')}">
+                <fieldset>
+                    <legend>{$tip|default=''}</legend>
+                    <!--form id-->
+                    <input  name="id" type="text"  value="{$edit['id']}" style="display: none;">
+                    <div class="form-group">
+                        <label class="col-lg-2 control-label" for="user_name">用户账号:</label>
+                        <div class="col-lg-10">
+                            <input class="form-control" id="user_name" name="user_name" type="text" placeholder="例:admin" value="{$edit['user_name']}">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-lg-2 control-label" for="password">用户密码:</label>
+                        <div class="col-lg-10">
+                            <input class="form-control" id="password" name="password" type="password" placeholder="不填写等于不修改">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-lg-2 control-label" for="group_id">所属组:</label>
+                        <div class="col-lg-10">
+                            <select class="form-control" id="group_id" name="group_id">
+                                <option value="0">未分配</option>
+                                <volist name="group" id="item">
+                                    <option value="{$item['id']}">{$item['title']}</option>
+                                </volist>
+                            </select>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-primary">提交</button>
+                    <button type="reset" class="btn btn-default" id="reset">还原</button>
+                    <a class="btn btn-default" href="{:U('index')}">返回</a>
+                </fieldset>
+            </form>
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+    $(function () {
+        reset();
+
+        $('#reset').on('click',function () {
+            setTimeout(reset,50);
+        });
+
+    });
+
+
+    
+    function reset() {
+        var group_id = "{$edit['group_id']|default='0'}";
+        $('#group_id').val(group_id);
+    }
+</script>

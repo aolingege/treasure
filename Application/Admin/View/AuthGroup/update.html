@@ -1,0 +1,144 @@
+<style type="text/css">
+    .auth-row{
+        display: flex;
+        margin-right: -15px;
+        margin-left: -15px;
+        margin-bottom: 15px;
+    }
+    .auth-controller{
+        text-align: right;
+    }
+    .auth-action{
+        display: flex;
+    }
+    .auth-action-items{
+        margin-right: 15px;
+    }
+    .auth-tip{
+        font-size: 17px;
+        color: #888;
+    }
+</style>
+<div class="row">
+    <div class="panel panel-default bootstrap-admin-no-table-panel">
+        <div class="panel-heading">
+            <div class="text-muted bootstrap-admin-box-title">{$title}权限组</div>
+        </div>
+        <div class="bootstrap-admin-no-table-panel-content bootstrap-admin-panel-content collapse in">
+            <form class="form-horizontal" method="post" action="{:U('update')}">
+                <fieldset>
+                    <legend>{$tip|default=''}</legend>
+                    <!--form id-->
+                    <input  name="id" type="text"  value="{$edit['id']}" style="display: none;">
+                    <div class="form-group">
+                        <label class="col-lg-2 control-label" for="title">权限组名称:</label>
+                        <div class="col-lg-10">
+                            <input class="form-control" id="title" name="title" type="text" placeholder="请填写名称" value="{$edit['title']}">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-lg-2 control-label" for="status">组状态:</label>
+                        <div class="col-lg-10">
+                            <select class="form-control" id="status" name="status">
+                                <option value="0">停止</option>
+                                <option value="1">正常</option>
+                            </select>
+                        </div>
+                    </div>
+                    <!--row-->
+                    <div class="form-group">
+                        <span class="col-lg-2 control-label auth-tip">拥有权限:</span>
+                        <div class="col-lg-10">
+                        </div>
+                    </div>
+                    <volist name="authNode" id="item">
+                        <div class="auth-row">
+                            <div class="auth-controller col-lg-2">
+                                <label for="{$item['name']}">{$item['title']}</label>
+                                <input type="checkbox" id="{$item['name']}" value="{$item['id']}" name="auth_node[]">
+                            </div>
+                            <div class="auth-action col-lg-10">
+                                <volist name="item['children']" id="action">
+                                    <div class="auth-action-items">
+                                        <label for="{$action['name']}">{$action['title']}</label>
+                                        <input type="checkbox" name="auth_node[]" id="{$action['name']}" value="{$action['id']}" class="auth-input">
+                                    </div>
+                                </volist>
+                            </div>
+                        </div>
+                    </volist>
+
+                    <button type="submit" class="btn btn-primary">提交</button>
+                    <button type="reset" class="btn btn-default" id="reset">还原</button>
+                    <a class="btn btn-default" href="{:U('index')}">返回</a>
+
+                </fieldset>
+            </form>
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+    $(function () {
+
+        
+        reset();
+        
+        $('#reset').on('click',function () {
+            setTimeout(reset,50);
+        });
+
+        //controller all selected
+        $('.auth-controller').on('click',function (e) {
+            var controller = $(e.currentTarget);
+            // main
+            var checkbox = controller.children().eq(1);
+            var actionCheckbox = controller.next().children();
+            var is = checkbox.is(':checked');
+            for (var i=0;i<actionCheckbox.length;i++){
+                actionCheckbox.eq(i).children().eq(1).prop('checked',is);
+            }
+        });
+
+        //action all selected
+        $('.auth-action-items').on('click',function (e) {
+            var action = $(e.currentTarget);
+            var is = action.children().eq(1).is(':checked');
+            var controller = action.parent().prev();
+            if (is){
+                controller.children().eq(1).prop('checked',is);
+            }
+
+            if(!is){
+                var siblings = action.siblings();
+                for (var i=0;i<siblings.length;i++){
+                    var siblingsIs = siblings.eq(i).children().eq(1).is(':checked');
+                    if(siblingsIs){
+                        is = true;
+                    }
+                }
+                if(!is){
+                    controller.children().eq(1).prop('checked',is);
+                }
+            }
+        });
+
+    });
+
+
+    //恢复默认值
+    function reset() {
+        var status = "{$edit['status']}";
+        var checkbox = "{$edit['rules']}";
+        var checkboxItem = checkbox.split(',');
+        var checkboxs = $('input[type=checkbox]');
+        for(var i=0;i<checkboxs.length;i++){
+            for(var j=0;j<checkboxItem.length;j++){
+                if (checkboxItem[j] === checkboxs.eq(i).val()){
+                        checkboxs.eq(i).prop('checked',true);
+                        break;
+                }
+            }
+        }
+        $('#status').val(status);
+    }
+</script>

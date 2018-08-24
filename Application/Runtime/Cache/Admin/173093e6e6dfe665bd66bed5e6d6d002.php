@@ -5,7 +5,7 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>首页</title>
+    <title><?php echo ($config['current']['h2']['title']); ?></title>
     <!-- Bootstrap -->
     <link href="/Public/css/bootstrap.min.css" rel="stylesheet" media="screen">
     <link href="/Public/css/bootstrap-theme.min.css" rel="stylesheet" media="screen">
@@ -82,12 +82,6 @@
         <div class="row">
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
                 <a class="navbar-brand" href="#">admin</a>
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
@@ -118,24 +112,13 @@
         <div class="col-md-2 bootstrap-admin-col-left">
             <ul class="nav navbar-collapse collapse bootstrap-admin-navbar-side">
                 <?php if(is_array($config['current']['h3'])): $i = 0; $__LIST__ = $config['current']['h3'];if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$data): $mod = ($i % 2 );++$i;?><li class="parent-node <?php echo ((isset($data['active']) && ($data['active'] !== ""))?($data['active']):''); ?>">
-                        <a href="javacript:void(0);"><i class="glyphicon glyphicon-chevron-right"></i> <?php echo ($data['title']); ?></a>
+                        <a href="javacript:void(0);"><i class="glyphicon <?php echo ((isset($data['icon']) && ($data['icon'] !== ""))?($data['icon']):'glyphicon-chevron-right'); ?>"></i> <?php echo ($data['title']); ?></a>
                     </li>
                     <ul class="subset-node nav navbar-collapse collapse bootstrap-admin-navbar-side">
                         <?php if(is_array($data['children'])): $i = 0; $__LIST__ = $data['children'];if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$h4): $mod = ($i % 2 );++$i;?><li class="subset" <?php echo ($h4['active']); ?> >
                                 <a href="<?php echo U($h4['name']);?>"> <?php echo ($h4['title']); ?></a>
                             </li><?php endforeach; endif; else: echo "" ;endif; ?>
                     </ul><?php endforeach; endif; else: echo "" ;endif; ?>
-                <!--<li class="parent-node">-->
-                <!--<a href="javacript:void(0);"><i class="glyphicon glyphicon-chevron-right"></i> 首页2</a>-->
-                <!--</li>-->
-                <!--<ul class="subset-node nav navbar-collapse collapse bootstrap-admin-navbar-side">-->
-                <!--<li class="subset" style="display: none">-->
-                <!--<a href="#"> 首页信息2</a>-->
-                <!--</li>-->
-                <!--<li class="subset" style="display: none">-->
-                <!--<a href="#"> 关于我们2</a>-->
-                <!--</li>-->
-                <!--</ul>-->
             </ul>
         </div>
         <main class="col-md-10">
@@ -159,7 +142,7 @@
                                <td><?php echo ($vo['status_cn']); ?></td>
                                <td>
                                    <div>
-                                       <a href="<?php echo U('updateNode','id='.$vo['id']);?>">编辑</a>
+                                       <a href="<?php echo U('update','id='.$vo['id']);?>">编辑</a>
                                        <a href="<?php echo U('');?>">删除</a>
                                    </div>
                                </td>

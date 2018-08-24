@@ -5,13 +5,16 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>首页</title>
+    <title><?php echo ($config['current']['h2']['title']); ?></title>
     <!-- Bootstrap -->
     <link href="/Public/css/bootstrap.min.css" rel="stylesheet" media="screen">
     <link href="/Public/css/bootstrap-theme.min.css" rel="stylesheet" media="screen">
 
     <!-- Bootstrap Admin Theme -->
     <link href="/Public/css/bootstrap-admin-theme.css" rel="stylesheet" media="screen">
+
+    <!--dialog-->
+    <link href="/Public/css/ui-dialog.css" rel="stylesheet" media="screen">
     <style>
         .subset a:hover{
             background-color: #21a9ec !important;
@@ -82,12 +85,6 @@
         <div class="row">
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
                 <a class="navbar-brand" href="#">admin</a>
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
@@ -97,12 +94,12 @@
                     </ul><?php endforeach; endif; else: echo "" ;endif; ?>
                 <ul class="nav navbar-nav navbar-right">
                     <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">管理员<b class="caret"></b></a>
+                        <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown">管理员<b class="caret"></b></a>
                         <ul class="dropdown-menu">
-                            <li><a href="#">重置密码</a></li>
-                            <li><a href="#">查看权限</a></li>
+                            <li><a href="javascript:void(0)" onclick="resetPsw()">重置密码</a></li>
+                            <li><a href="<?php echo U('login/viewPermissions');?>">查看权限</a></li>
                             <li class="divider"></li>
-                            <li><a href="#">退出登录</a></li>
+                            <li><a href="<?php echo U('login/loginOut');?>">退出登录</a></li>
                         </ul>
                     </li>
                 </ul>
@@ -118,24 +115,13 @@
         <div class="col-md-2 bootstrap-admin-col-left">
             <ul class="nav navbar-collapse collapse bootstrap-admin-navbar-side">
                 <?php if(is_array($config['current']['h3'])): $i = 0; $__LIST__ = $config['current']['h3'];if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$data): $mod = ($i % 2 );++$i;?><li class="parent-node <?php echo ((isset($data['active']) && ($data['active'] !== ""))?($data['active']):''); ?>">
-                        <a href="javacript:void(0);"><i class="glyphicon glyphicon-chevron-right"></i> <?php echo ($data['title']); ?></a>
+                        <a href="javacript:void(0);"><i class="glyphicon <?php echo ((isset($data['icon']) && ($data['icon'] !== ""))?($data['icon']):'glyphicon-chevron-right'); ?>"></i> <?php echo ($data['title']); ?></a>
                     </li>
                     <ul class="subset-node nav navbar-collapse collapse bootstrap-admin-navbar-side">
                         <?php if(is_array($data['children'])): $i = 0; $__LIST__ = $data['children'];if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$h4): $mod = ($i % 2 );++$i;?><li class="subset" <?php echo ($h4['active']); ?> >
                                 <a href="<?php echo U($h4['name']);?>"> <?php echo ($h4['title']); ?></a>
                             </li><?php endforeach; endif; else: echo "" ;endif; ?>
                     </ul><?php endforeach; endif; else: echo "" ;endif; ?>
-                <!--<li class="parent-node">-->
-                <!--<a href="javacript:void(0);"><i class="glyphicon glyphicon-chevron-right"></i> 首页2</a>-->
-                <!--</li>-->
-                <!--<ul class="subset-node nav navbar-collapse collapse bootstrap-admin-navbar-side">-->
-                <!--<li class="subset" style="display: none">-->
-                <!--<a href="#"> 首页信息2</a>-->
-                <!--</li>-->
-                <!--<li class="subset" style="display: none">-->
-                <!--<a href="#"> 关于我们2</a>-->
-                <!--</li>-->
-                <!--</ul>-->
             </ul>
         </div>
         <main class="col-md-10">
@@ -188,27 +174,13 @@
             <div class="row">
                 <div class="panel panel-default bootstrap-admin-no-table-panel">
                     <div class="panel-heading">
-                        <div class="text-muted bootstrap-admin-box-title">后台负载</div>
-                    </div>
-                    <div class="bootstrap-admin-panel-content bootstrap-admin-no-table-panel-content collapse in">
-                        <div class="charts" id="charts-load"></div>
-                        <div class="chart-bottom-heading">
-                            <span class="label label-info">服务器时区：东八区</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="panel panel-default bootstrap-admin-no-table-panel">
-                    <div class="panel-heading">
                         <div class="text-muted bootstrap-admin-box-title">后台登录统计</div>
-                        <div class="pull-right"><span class="badge">今日登录总数:100次</span></div>
+                        <div class="pull-right"><span class="badge">今日登录总数:<?php echo ($log['all']); ?>次</span></div>
                     </div>
                     <div class="bootstrap-admin-panel-content bootstrap-admin-no-table-panel-content collapse in">
                         <div class="charts" id="charts-error"></div>
                         <div class="chart-bottom-heading">
-                            <span class="label label-info">登录成功率：3/100次</span>
+                            <span class="label label-info">登录成功率：<?php echo ($log['normal']); ?>/<?php echo ($log['all']); ?>次</span>
                         </div>
                     </div>
                 </div>
@@ -217,6 +189,8 @@
 </div>
 <script>
     $(function () {
+        var login = '<?php echo ($login); ?>';
+        var loginObj = JSON.parse(login);
         var chart = Highcharts.chart('charts-error', {
             title: {
                 text: '登录错误率'
@@ -242,10 +216,10 @@
                 type: 'pie',
                 name: '错误类型',
                 data: [
-                    ['验证码错误',   45.0],
-                    ['正常登录',       26.8],
-                    ['密码错误',    8.5],
-                    ['其他',   0.7]
+                    ['验证码错误',   loginObj.code],
+                    ['正常登录',     loginObj.normal],
+                    ['密码错误',    loginObj.psw],
+                    ['其他',   loginObj.other]
                 ]
             }]
         });
@@ -269,6 +243,11 @@
 <script type="text/javascript" src="/Public/js/jquery.dataTables.min.js"></script>
 <script type="text/javascript" src="/Public/js/dataTables.bootstrap.min.js"></script>
 
+<!--dialog-->
+<script type="text/javascript" src="/Public/js/dialog-plus-min.js"></script>
+<script type="text/javascript" src="/Public/js/common.js"></script>
+
+
 <script type="text/javascript">
     $('.parent-node').on('click',function(e){
         // Trigger element
@@ -290,8 +269,28 @@
                 $(element).slideUp(300);
         });
     });
+    
+    
+    function resetPsw() {
+        confirm('确认重置密码?','提示',function () {
+            $.ajax({
+               type:"POST",
+               url:"<?php echo U('login/resetPsw');?>",
+               data:{is:true},
+               success:function (res) {
+                    if(res.status === 1){
+                        tips('重置为123456',4);
+                    }
+               },
+               error:function () {
+                   tips('重置失败');
+               }
+            });
+        });
+    }
 
 
+    
 </script>
 
 </body>

@@ -78,7 +78,7 @@ class BaseController extends Controller {
 
         //读取系统导航
         //读取能看到的导航条
-        $navigation = M('auth_rule')->where('show_status=1')->order('sort DESC,id ASC')->field('id,name,title,parent_id')->select();
+        $navigation = M('auth_rule')->where('show_status=1')->order('sort DESC')->field('id,name,title,parent_id')->select();
         //取权限交集
         $navigation = refactor_array($navigation);
         //如果ID不等于1
@@ -93,57 +93,81 @@ class BaseController extends Controller {
         }
         $config['current'] = $this->getCurrentFn($navigation);
         $config['navigation'] = tree_array($navigation);
+        foreach ($config['navigation'] as $k=>$nav){
+            $config['navigation'][$k]['name']  = str_replace('Nav','',$nav['name']);
+        }
         $this->assign('config', $config);
     }
 
 
+
     /**
-     * 得到当前的功能集
+     * 当前节点从下往上寻找，
+     * 其他节点从上往下寻找
+     * @param $fns
+     * @return array|bool
      */
     protected function getCurrentFn($fns){
-        $current = array();
         //Tree function set
+        //index
+        $currentIndex = CONTROLLER_NAME.'/'.ACTION_NAME;
         //Linear lookup
-        foreach ($fns as $index => $fn){
-            //一级控制器
-            if ($fn['parent_id'] == 0 && $fn['name'] == CONTROLLER_NAME){
-                //Current function
-                $current = $fn;
-                unset($fns[$index]);
-                break;
-            }elseif ($fn['parent_id'] == 0){
-                unset($fns[$index]);
-            }
-        }
-        //Can't find
-        if (empty($current))
-            return false;
-        //寻找下面的
-        $currentH3 = array();
         foreach ($fns as $fn){
-            if ($fn['parent_id'] == $current['id']){
-                    if (str_replace('Nav','',$fn['name']) == CONTROLLER_NAME)
-                        $fn['active'] = 'active';
-                    $currentH3[] = $fn;
+            if ($fn['name'] == $currentIndex){
+                $currentFn = $fn;
+                break;
             }
         }
-        //go on
-        if (!empty($currentH3)){
-            foreach ($currentH3 as $index => $title){
-                foreach ($fns as $fn){
-                    if ($title['id'] == $fn['parent_id']){
-                        if ($fn['name'] != CONTROLLER_NAME.'/'.ACTION_NAME){
-                            $tempFns = explode('/',$fn['name']);
-                            if (CONTROLLER_NAME != $tempFns[0]){
-                                $fn['active'] = 'style="display: none;"';
-                            }
-                        }
-                        $currentH3[$index]['children'][] = $fn;
+        //Find brother node
+        //Can't find
+        if (!isset($currentFn))
+            return false;
+        $brother = array();
+        foreach ($fns as $fn){
+            if ($currentFn['parent_id'] == $fn['parent_id']){
+                    if ($currentFn['id'] == $fn['id']){
+                        $fn['active'] = 'style="background-color: #eaf2ff;"';
                     }
+                    $brother[] = $fn;
+            }
+            if ($currentFn['parent_id'] == $fn['id']){
+                $fn['active'] = 'active';
+                $parent = $fn;
+            }
+        }
+        //exception
+        if ( !( isset($parent) && !empty($brother) ) ){
+            return false;
+        }
+        $parent['children'] = $brother;
+        $parent['icon'] = 'glyphicon-chevron-down pull-right';
+        $topNodeID = $parent['parent_id'];
+        $currentH3 = array();
+        $currentH3[] = $parent;
+        foreach ($fns as $fn){
+            if ($fn['parent_id'] == $topNodeID){
+                if ($fn['id'] == $parent['id'])
+                    continue;
+                $currentH3[] = $fn;
+            }
+            if ($fn['id'] == $topNodeID){
+                $topNode = $fn;
+            }
+        }
+        foreach ($currentH3 as $index => $title){
+            if ($title['id'] != $parent['id'])
+            foreach ($fns as $fn){
+                if ($title['id'] == $fn['parent_id']){
+                    $fn['active'] = 'style="display: none;"';
+                    $currentH3[$index]['children'][] = $fn;
                 }
             }
         }
-        return array('h2'=>$current,'h3'=>$currentH3);
+        if (!isset($topNode)){
+            $topNode = false;
+        }
+
+        return array('h2'=>$topNode,'h3'=>$currentH3);
     }
 
 

@@ -2,6 +2,7 @@
 namespace Admin\Controller;
 
 use Admin\Model\AdminModel;
+use Admin\Model\AuthModel;
 use Admin\Model\LoginLogModel;
 
 class LoginController extends BaseController {
@@ -51,6 +52,7 @@ class LoginController extends BaseController {
 
     /**
      * 验证用户信息
+     * @return bool|string
      */
     public function checkUser()
     {
@@ -74,8 +76,60 @@ class LoginController extends BaseController {
             return '没有此账号信息！';
         }
         $logModel->generalError($adminTable->user_name,1);
+        $account['last_login'] = date('Y-m-d H:i:s');
+        $adminTable->where(array('user_name'=>$account['user_name'],'password'=>$account['password']))
+            ->data($account)->save();
         session('admin',$account);
         return true;
+    }
+
+
+    /**
+     * 重置密码
+     */
+    public function resetPsw()
+    {
+        $values = session('admin');
+        $adminModel = new AdminModel();
+        $result = $adminModel->where("id={$values['id']}")
+            ->data(array('password'=>md5('123456')))->save();
+        $values['password'] = md5('123456');
+        session('admin',$values);
+        if ($result){
+            $this->ajaxReturn(array('status'=>1,'msg'=>'重置成功'));
+        }else{
+            $this->ajaxReturn(array('status'=>0,'msg'=>'重置失败'));
+        }
+    }
+
+
+    /**
+     * 查看权限
+     */
+    public function viewPermissions()
+    {
+        $values = session('admin');
+        $authModel = new AuthModel();
+        if ($values['id'] == 1){
+            //超级管理员
+            $result = $authModel->getAllAuth();
+        }else{
+            $result = $authModel->getUserAuth($values);
+            $result = $authModel->getCleanUp($result);
+
+        }
+        $this->assign('info',$result);
+        $this->display();
+    }
+
+
+    /**
+     * 退出登录
+     */
+    public function loginOut()
+    {
+        session('admin',null);
+        $this->redirect('login/login');
     }
 
 
